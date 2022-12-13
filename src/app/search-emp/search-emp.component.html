@@ -1,0 +1,49 @@
+<app-nav-bar-admin></app-nav-bar-admin>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row">
+                <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h3>Employee Search</h3>
+                </div>
+                <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Code</label>
+                    <input type="number" name="empCode" [(ngModel)]="empCode" id="" class="form-control">
+                </div>
+                <div class="mt-2 col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row" *ngIf="flag">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name:</th>
+                            <th scope="col">Code:</th>
+                            <th scope="col">Email:</th>
+                            <th scope="col">Designation:</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let i of empData">
+                            <td>{{i.name}}</td>
+                            <td>{{i.empCode}}</td>
+                            <td>{{i.email}}</td>
+                            <td>{{i.designation}}</td>
+                          </tr>
+                        </tbody>
+                      </table>    
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
