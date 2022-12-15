@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-employee',
-  templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css']
+  selector: 'app-guard',
+  templateUrl: './guard.component.html',
+  styleUrls: ['./guard.component.css']
 })
-export class EmployeeComponent {
+export class GuardComponent {
   email=""
   password=""
   empData:any=[]
@@ -15,14 +15,14 @@ export class EmployeeComponent {
   checkValues=()=>{
     let data = {"email":this.email,"password":this.password}
     console.log(data)
-    this.api.validateEmployee(data).subscribe(
+    this.api.validateGuard(data).subscribe(
       (response:any)=>{
         console.log(response);
           
         if(response.status=="success"){
           this.empData=response
-          localStorage.setItem("empInfo",response.empCode)
-          this.router.navigate(['/empprofile'])
+          localStorage.setItem("guardInfo",response.empCode)
+          this.router.navigate(['/guardprofile'])
         }
         else{
         alert(response.message)

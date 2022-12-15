@@ -1,0 +1,45 @@
+<app-nav-bar-admin></app-nav-bar-admin>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row">
+                <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h3>Security Guard Registration</h3>
+                </div>
+                <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Code</label>
+                    <input type="number" name="empCode" [(ngModel)]="empCode" id="" class="form-control">
+                </div>
+                <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" name="name" [(ngModel)]="name" id="" class="form-control">
+                </div>
+                <div class="mt-2 col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Email</label>
+                    <input type="email" name="email" [(ngModel)]="email" id="" class="form-control">
+                </div>
+                <div class="mt-2 col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Phone no</label>
+                    <input type="number" name="email" [(ngModel)]="phoneNo" id="" class="form-control">
+                </div>
+                <div class="mt-2 col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Username</label>
+                    <input type="text" name="userName" [(ngModel)]="userName" id="" class="form-control">
+                </div>
+                <div class="mt-2 col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Password</label>
+                    <input type="password" name="password" [(ngModel)]="password" id="" class="form-control">
+                </div>
+                <div class="mt-2 col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn btn-success">Register</button>
+                </div>
+                <div class="mt-2 col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <a routerLink="/">Guard Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

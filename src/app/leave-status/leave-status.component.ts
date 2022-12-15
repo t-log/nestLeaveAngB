@@ -14,7 +14,8 @@ export class LeaveStatusComponent {
     let data={"empCode":localStorage.getItem("empId")}
     api.leaveStatus(data).subscribe(
       (response:any)=>
-      {
+      { 
+        
         if(response[0].status==1)
         {
           this.statusMessage="Awaiting approval"
@@ -30,7 +31,7 @@ export class LeaveStatusComponent {
           this.statusMessage="Rejected"
           console.log(this.statusMessage);  
         }
-      this.leaveData = response; 
+      this.leaveData = response;
       console.log(this.leaveData);
       }
       )

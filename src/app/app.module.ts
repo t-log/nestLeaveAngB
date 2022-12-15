@@ -19,6 +19,13 @@ import { NavBarEmployeeComponent } from './nav-bar-employee/nav-bar-employee.com
 import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
 import { LeaveStatusComponent } from './leave-status/leave-status.component';
 import { ViewLeavesComponent } from './view-leaves/view-leaves.component';
+import { AddguardComponent } from './addguard/addguard.component';
+import { ViewGuardComponent } from './view-guard/view-guard.component';
+import { GuardComponent } from './guard/guard.component';
+import { GuardDashboardComponent } from './guard-dashboard/guard-dashboard.component';
+import { NavBarGuardComponent } from './nav-bar-guard/nav-bar-guard.component';
+import { AddEmployeeLogComponent } from './add-employee-log/add-employee-log.component';
+import { AddVisitorLogComponent } from './add-visitor-log/add-visitor-log.component';
 
 const myRoute:Routes=[{path:"",component:AdminComponent},
                       {path:"admindash",component:AdminDashboardComponent},
@@ -31,6 +38,12 @@ const myRoute:Routes=[{path:"",component:AdminComponent},
                       {path:"applyleave",component:ApplyLeaveComponent},
                       {path:"leavestatus",component:LeaveStatusComponent},
                       {path:"viewleave",component:ViewLeavesComponent},
+                      {path:"addguard",component:AddguardComponent},
+                      {path:"viewguard",component:ViewGuardComponent},
+                      {path:"guardlogin",component:GuardComponent},
+                      {path:"guardprofile",component:GuardDashboardComponent},
+                      {path:"addemplog",component:AddEmployeeLogComponent},
+                      {path:"addvisitorlog",component:AddVisitorLogComponent},
                       ]
 
 @NgModule({
@@ -48,7 +61,14 @@ const myRoute:Routes=[{path:"",component:AdminComponent},
     NavBarEmployeeComponent,
     ApplyLeaveComponent,
     LeaveStatusComponent,
-    ViewLeavesComponent
+    ViewLeavesComponent,
+    AddguardComponent,
+    ViewGuardComponent,
+    GuardComponent,
+    GuardDashboardComponent,
+    NavBarGuardComponent,
+    AddEmployeeLogComponent,
+    AddVisitorLogComponent
   ],
   imports: [
     BrowserModule,

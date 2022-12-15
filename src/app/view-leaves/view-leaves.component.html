@@ -17,7 +17,7 @@
                     </thead>
                     <tbody>
                             <tr *ngFor="let i of leaveData">
-                                <ng-container>
+                                <ng-container *ngIf="i.status==1">
                                     <td>{{i.name}}</td>             <!--need to take data from emp tabel using join :>-->
                                     <td>{{i.emp_code}}</td>
                                     <td>{{i.remarks}}</td>

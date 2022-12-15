@@ -27,7 +27,7 @@ export class ApplyLeaveComponent {
         if(response.status=="success")
         {
           alert("Leave Application Submitted")
-          this.router.navigate(['/leavestatus'])
+          // this.router.navigate(['/leavestatus'])
         }
           
         else{
