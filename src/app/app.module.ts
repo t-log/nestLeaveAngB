@@ -13,13 +13,25 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 import { SearchEmpComponent } from './search-emp/search-emp.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { ProfileEmpComponent } from './profile-emp/profile-emp.component';
+import { NavBarEmployeeComponent } from './nav-bar-employee/nav-bar-employee.component';
+import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
+import { LeaveStatusComponent } from './leave-status/leave-status.component';
+import { ViewLeavesComponent } from './view-leaves/view-leaves.component';
 
 const myRoute:Routes=[{path:"",component:AdminComponent},
                       {path:"admindash",component:AdminDashboardComponent},
                       {path:"addemp",component:AddEmployeeComponent},
                       {path:"empview",component:ViewEmployeeComponent},
                       {path:"empdelete",component:DeleteEmployeeComponent},
-                      {path:"empsearch",component:SearchEmpComponent}]
+                      {path:"empsearch",component:SearchEmpComponent},
+                      {path:"emp",component:EmployeeComponent},
+                      {path:"empprofile",component:ProfileEmpComponent},
+                      {path:"applyleave",component:ApplyLeaveComponent},
+                      {path:"leavestatus",component:LeaveStatusComponent},
+                      {path:"viewleave",component:ViewLeavesComponent},
+                      ]
 
 @NgModule({
   declarations: [
@@ -30,7 +42,13 @@ const myRoute:Routes=[{path:"",component:AdminComponent},
     AddEmployeeComponent,
     ViewEmployeeComponent,
     DeleteEmployeeComponent,
-    SearchEmpComponent
+    SearchEmpComponent,
+    EmployeeComponent,
+    ProfileEmpComponent,
+    NavBarEmployeeComponent,
+    ApplyLeaveComponent,
+    LeaveStatusComponent,
+    ViewLeavesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,39 @@
+<app-nav-bar-admin></app-nav-bar-admin>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name:</th>
+                        <th scope="col">Emp Code:</th>
+                        <th scope="col">Remarks</th>
+                        <th scope="col">From Date:</th>
+                        <th scope="col">To Date:</th>
+                        <th scope="col">Leave Type:</th>
+                        <th scope="col">Action:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                            <tr *ngFor="let i of leaveData">
+                                <ng-container>
+                                    <td>{{i.name}}</td>             <!--need to take data from emp tabel using join :>-->
+                                    <td>{{i.emp_code}}</td>
+                                    <td>{{i.remarks}}</td>
+                                    <td>{{i.from_date}}</td>
+                                    <td>{{i.to_date}}</td>
+                                    <td>{{i.leave_type}}</td>
+                                    <td>
+                                        <button class="btn btn-success" (click)="approveClicked(i.emp_code)">Approve</button>
+                                        <button class="ms-2 btn btn-danger" (click)="rejectClicked(i.emp_code)">Reject</button>
+                                    </td>
+                                </ng-container>
+                                
+                              </tr>
+                    </tbody>
+                  </table>    
+            </div>
+        </div>
+    </div>
+</div>
