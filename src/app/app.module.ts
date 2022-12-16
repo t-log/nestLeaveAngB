@@ -26,8 +26,12 @@ import { GuardDashboardComponent } from './guard-dashboard/guard-dashboard.compo
 import { NavBarGuardComponent } from './nav-bar-guard/nav-bar-guard.component';
 import { AddEmployeeLogComponent } from './add-employee-log/add-employee-log.component';
 import { AddVisitorLogComponent } from './add-visitor-log/add-visitor-log.component';
+import { ViewVisitorLogComponent } from './view-visitor-log/view-visitor-log.component';
+import { ViewEmployeeLogComponent } from './view-employee-log/view-employee-log.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
-const myRoute:Routes=[{path:"",component:AdminComponent},
+const myRoute:Routes=[{path:"",component:MainPageComponent},
+                      {path:"admin",component:AdminComponent},
                       {path:"admindash",component:AdminDashboardComponent},
                       {path:"addemp",component:AddEmployeeComponent},
                       {path:"empview",component:ViewEmployeeComponent},
@@ -44,6 +48,8 @@ const myRoute:Routes=[{path:"",component:AdminComponent},
                       {path:"guardprofile",component:GuardDashboardComponent},
                       {path:"addemplog",component:AddEmployeeLogComponent},
                       {path:"addvisitorlog",component:AddVisitorLogComponent},
+                      {path:"viewemplog",component:ViewEmployeeLogComponent},
+                      {path:"viewvisitorlog",component:ViewVisitorLogComponent},
                       ]
 
 @NgModule({
@@ -68,7 +74,10 @@ const myRoute:Routes=[{path:"",component:AdminComponent},
     GuardDashboardComponent,
     NavBarGuardComponent,
     AddEmployeeLogComponent,
-    AddVisitorLogComponent
+    AddVisitorLogComponent,
+    ViewVisitorLogComponent,
+    ViewEmployeeLogComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

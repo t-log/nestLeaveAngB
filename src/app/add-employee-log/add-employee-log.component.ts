@@ -17,11 +17,24 @@ export class AddEmployeeLogComponent {
   { 
     const date=new Date();
     let data:any={"empCode":this.empCode,"entryTime":date.toLocaleTimeString(),"date":date.toLocaleDateString()}
+    let check:any={"empCode":this.empCode}
 
     console.log(data);
     
     this.api.addEmployeeLog(data).subscribe(
       (response:any)=>{
+
+        // // Employee already on leave check
+        // this.api.leaveStatus(check).subscribe(
+        //   (response:any)=>{
+        //       console.log("Leave status response"+response);
+        //       if(response.status==2){
+        //         alert("Employee Already on leave")
+        //       }
+              
+        //   }
+        // )
+
         console.log(response);
         if(response.status=="success")
         {
