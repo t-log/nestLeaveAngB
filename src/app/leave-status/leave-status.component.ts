@@ -10,29 +10,17 @@ export class LeaveStatusComponent {
   
   leaveData:any=[]
   statusMessage=""
+  counter=0
   constructor(private api:ApiService){
     let data={"empCode":localStorage.getItem("empId")}
     api.leaveStatus(data).subscribe(
       (response:any)=>
       { 
-        
-        if(response[0].status==1)
-        {
-          this.statusMessage="Awaiting approval"
-          console.log(this.statusMessage);  
-        }
-        else if(response[0].status==2)
-        {
-          this.statusMessage="Accepted"
-          console.log(this.statusMessage);  
-        }
-        else if(response[0].status==-1)
-        {
-          this.statusMessage="Rejected"
-          console.log(this.statusMessage);  
-        }
-      this.leaveData = response;
-      console.log(this.leaveData);
+      for(let i of response)
+      {
+        this.leaveData[this.counter] = response[this.counter];
+        this.counter++
+      } 
       }
       )
      

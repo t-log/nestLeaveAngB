@@ -25,7 +25,8 @@ export class ApplyLeaveComponent {
       (response:any)=>{
         console.log(response);
         if(response.status=="success")
-        {
+        { 
+          localStorage.setItem("leaveId",response.leaveId)
           alert("Leave Application Submitted")
           // this.router.navigate(['/leavestatus'])
         }

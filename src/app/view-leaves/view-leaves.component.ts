@@ -21,7 +21,7 @@ export class ViewLeavesComponent {
   }
 
   approveClicked=(empCode:any)=>{
-    let decision={"empCode":empCode,"status":2}
+    let decision={"empCode":empCode,"status":2,"id":localStorage.getItem("leaveId")}
     console.log(decision)
     this.api.decideLeaveRequest(decision).subscribe(
       (response:any)=>
@@ -39,7 +39,7 @@ export class ViewLeavesComponent {
   }
 
   rejectClicked=(empCode:any)=>{
-    let decision={"empCode":empCode,"status":-1}
+    let decision={"empCode":empCode,"status":-1,"id":localStorage.getItem("leaveId")}
     console.log(decision);
     
     this.api.decideLeaveRequest(decision).subscribe(

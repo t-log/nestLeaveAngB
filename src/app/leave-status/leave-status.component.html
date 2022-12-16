@@ -19,7 +19,9 @@
                         <td>{{i.fromDate}}</td>
                         <td>{{i.toDate}}</td>
                         <td>{{i.leaveType}}</td>
-                        <td>{{statusMessage}}</td>
+                        <td *ngIf="i.status==2">Approved</td>
+                        <td *ngIf="i.status==-1">Rejected</td>
+                        <td *ngIf="i.status==1">Awaiting Approval</td>
                       </tr>
                     </tbody>
                   </table>    
