@@ -13,8 +13,17 @@ export class ApplyLeaveComponent {
   toDate=""
   leaveType=""
   remarks=""
-
-  constructor(private router:Router,private api:ApiService){}
+  remainingDaysData:any=[]
+  constructor(private router:Router,private api:ApiService){
+    
+    let remainingdata:any={"empCode":localStorage.getItem("empId")}
+    this.api.remainingLeave(remainingdata).subscribe(
+      (response:any)=>{
+          console.log(response);
+          this.remainingDaysData=response    
+      }
+    )
+  }
   readValues=()=>
   {
     let data:any={"status":1,"empCode":localStorage.getItem("empId"),"fromDate":this.fromDate,"toDate":this.toDate,"leaveType":this.leaveType,"remarks":this.remarks}

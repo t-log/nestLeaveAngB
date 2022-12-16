@@ -17,6 +17,7 @@ export class ApiService {
   leaveStatus=(dataToSend:any)=>{return this.http.post("http://localhost:8080/leavestatus",dataToSend)}
   decideLeaveRequest=(dataToSend:any)=>{return this.http.post("http://localhost:8080/decide",dataToSend)}
   viewAllLeaves=()=>{return this.http.get("http://localhost:8080/viewallleaves")}
+  remainingLeave=(dataToSend:any)=>{return this.http.post("http://localhost:8080/remainingleave",dataToSend)}
 
   addGuard=(dataToSend:any)=>{return this.http.post("http://localhost:8080/addguard",dataToSend)}
   guardView=()=>{return this.http.get("http://localhost:8080/viewguard")}

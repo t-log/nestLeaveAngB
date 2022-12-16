@@ -25,15 +25,24 @@ export class ViewLeavesComponent {
     console.log(decision)
     this.api.decideLeaveRequest(decision).subscribe(
       (response:any)=>
-      {
-        if(response.status=="success")
+      { 
+        if(response.message=="failed")
         {
-          alert("Leave approved")
+          alert("Leaves Exhausted for the employee")
         }
         else
         {
-          alert("Something wrong happened!")
+          if(response.status=="success")
+          {
+            alert("Leave approved")
+          }
+          else
+          {
+            alert("Something wrong happened!")
+          }
         }
+        
+       
       }
     )
   }
@@ -44,15 +53,23 @@ export class ViewLeavesComponent {
     
     this.api.decideLeaveRequest(decision).subscribe(
       (response:any)=>
-      {
-        if(response.status=="success")
+      { 
+        if(response.message=="failed")
         {
-          alert("Leave Rejected")
+          alert("Leaves exhausted for employee")
         }
         else
         {
-          alert("Something wrong happened!")
+          if(response.status=="success")
+          {
+            alert("Leave Rejected")
+          }
+          else
+          {
+            alert("Something wrong happened!")
+          }
         }
+        
       }
     )
   }
