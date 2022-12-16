@@ -20,8 +20,8 @@ export class ViewLeavesComponent {
       )   
   }
 
-  approveClicked=(empCode:any)=>{
-    let decision={"empCode":empCode,"status":2,"id":localStorage.getItem("leaveId")}
+  approveClicked=(empCode:any,from_date:any,to_date:any,leave_type:any)=>{
+    let decision={"empCode":empCode,"status":2,"id":localStorage.getItem("leaveId"),"fromDate":from_date,"toDate":to_date,"leaveType":leave_type}
     console.log(decision)
     this.api.decideLeaveRequest(decision).subscribe(
       (response:any)=>

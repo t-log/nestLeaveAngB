@@ -25,7 +25,7 @@
                                     <td>{{i.to_date}}</td>
                                     <td>{{i.leave_type}}</td>
                                     <td>
-                                        <button class="btn btn-success" (click)="approveClicked(i.emp_code)">Approve</button>
+                                        <button class="btn btn-success" (click)="approveClicked(i.emp_code,i.from_date,i.to_date,i.leave_type)">Approve</button>
                                         <button class="ms-2 btn btn-danger" (click)="rejectClicked(i.emp_code)">Reject</button>
                                     </td>
                                 </ng-container>
