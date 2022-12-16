@@ -28,7 +28,7 @@ export class ViewLeavesComponent {
       { 
         if(response.message=="failed")
         {
-          alert("Leaves Exhausted for the employee")
+          alert("Employee dosen't have sufficient leave balance")
           this.rejectClicked(decision.empCode)
         }
         else
