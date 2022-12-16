@@ -29,6 +29,7 @@ export class ViewLeavesComponent {
         if(response.message=="failed")
         {
           alert("Leaves Exhausted for the employee")
+          this.rejectClicked(decision.empCode)
         }
         else
         {
